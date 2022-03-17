@@ -14,8 +14,9 @@ def import_dataset(directory):
     devices = [[], [], [], [], [], [], [], [], []]
 
     # iterate through each directory, subdirectory and file
-    itr = -3
+    itr = -1
     for root, subdirectories, files in os.walk(directory):
+        print(itr)
         for file in files:
             # check if a new subdirectory was entered
             if len(subdirectories) != 0:
@@ -226,8 +227,8 @@ with dataset:
     st.write("**Note** all plots and metrics displayed represent a single device")
 
     # embed program inside containers
-    # former path: r"C:\Users\muggs\Desktop\AAI-530 Data Analytics and IoT\Assignments\Final Project"
-    path = r"\."
+    path = __file__
+    path = path.replace("Botnet-Attack-Detection.py", "Data")
     device_data = import_dataset(path)
 
     # display dataset format
