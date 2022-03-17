@@ -226,7 +226,8 @@ with dataset:
     st.write("**Note** all plots and metrics displayed represent a single device")
 
     # embed program inside containers
-    path = r"C:\Users\muggs\Desktop\AAI-530 Data Analytics and IoT\Assignments\Final Project"
+    # former path: r"C:\Users\muggs\Desktop\AAI-530 Data Analytics and IoT\Assignments\Final Project"
+    path = r"\."
     device_data = import_dataset(path)
 
     # display dataset format
